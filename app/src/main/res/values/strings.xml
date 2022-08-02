@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">fitapp</string>
+    <string name="log_in">Continue with Google</string>
+    <string name="app_name_Fitapp" translatable="false">Fitapp</string>
 </resources>
