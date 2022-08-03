@@ -2,4 +2,6 @@
     <string name="app_name">fitapp</string>
     <string name="log_in">Continue with Google</string>
     <string name="app_name_Fitapp" translatable="false">Fitapp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
