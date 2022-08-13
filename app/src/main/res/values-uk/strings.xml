@@ -2,4 +2,11 @@
 <resources>
     <string name="app_name">fitapp</string>
     <string name="log_in">Продовжити з Google</string>
+    <string name="Workout">Workout</string>
+    <string name="Calendar">Календар</string>
+    <string name="Account">Обліковий запис</string>
+    <string name="WorkoutPrograms">Програми тренувань</string>
+    <string name="beginner_level">новачок</string>
+    <string name="medium_level">середній</string>
+    <string name="advanced_level">просунутий</string>
 </resources>

@@ -3,13 +3,13 @@
 <item
     android:id="@+id/Workout"
     android:icon="@drawable/ic_taining"
-    android:title="Workout"/>
+    android:title="@string/Workout"/>
     <item
         android:id="@+id/calendar"
         android:icon="@drawable/ic_calendar"
-        android:title="Calendar"/>
+        android:title="@string/Calendar"/>
     <item
         android:id="@+id/account"
         android:icon="@drawable/ic_account"
-        android:title="Account"/>
+        android:title="@string/Account"/>
 </menu>

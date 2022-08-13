@@ -2,6 +2,13 @@
     <string name="app_name">fitapp</string>
     <string name="log_in">Continue with Google</string>
     <string name="app_name_Fitapp" translatable="false">Fitapp</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="Workout">Workout</string>
+    <string name="Calendar">Calendar</string>
+    <string name="Account">Account</string>
+    <string name="WorkoutPrograms">Workout programs</string>
+    <string name="beginner_level">beginner</string>
+    <string name="medium_level">medium</string>
+    <string name="advanced_level">advanced</string>
 </resources>

@@ -1,8 +1,10 @@
 package com.example.fitapp.feature.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitapp.R
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity(), MainView {
     }
 
     private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)

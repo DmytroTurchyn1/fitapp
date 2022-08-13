@@ -2,4 +2,11 @@
 <resources>
     <string name="app_name">fitapp</string>
     <string name="log_in">Continuar con Google</string>
+    <string name="Workout">Ejercicio</string>
+    <string name="Calendar">Calendario</string>
+    <string name="Account">Cuenta</string>
+    <string name="WorkoutPrograms">programas de entrenamiento</string>
+    <string name="beginner_level">principiante</string>
+    <string name="medium_level">medio</string>
+    <string name="advanced_level">avanzado</string>
 </resources>

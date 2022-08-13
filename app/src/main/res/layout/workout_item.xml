@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="35dp"
+    android:layout_marginBottom="5dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+<ImageView
+    android:id="@+id/card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:srcCompat="@drawable/ic_rectangle_1">
+
+</ImageView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:srcCompat="@drawable/ic_calendar" />
+
+            <TextView
+                android:id="@+id/coursename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="NEWBIE"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/courselevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/beginner_level"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/coursedescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:text="muscle building, 2 weeks"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kanit"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

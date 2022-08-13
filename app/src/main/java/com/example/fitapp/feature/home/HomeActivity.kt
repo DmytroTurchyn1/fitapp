@@ -8,7 +8,9 @@ import com.example.fitapp.feature.login.MainPresenter
 import com.example.fitapp.fragments.AccountFragment
 import com.example.fitapp.fragments.CalendarFragment
 import com.example.fitapp.fragments.WorkoutFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
+
 
 class HomeActivity : AppCompatActivity(), HomeView {
     private lateinit var presenter: HomePresenter
@@ -26,8 +28,8 @@ class HomeActivity : AppCompatActivity(), HomeView {
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.Workout -> replace_fragment(WorkoutFragment)
-                R.id.calendar -> replace_fragment(WorkoutFragment)
-                R.id.account -> replace_fragment(WorkoutFragment)
+                R.id.calendar -> replace_fragment(CalendarFragment)
+                R.id.account -> replace_fragment(AccountFragment)
             }
             true
         }
