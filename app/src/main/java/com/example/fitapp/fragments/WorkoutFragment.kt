@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.fitapp.R
 import com.example.fitapp.adapter.WorkoutAdapter
 import com.example.fitapp.model.WorkoutProvider
-import kotlinx.android.synthetic.main.fragment_workout.*
+
 
 
 private const val ARG_PARAM1 = "param1"
@@ -37,7 +38,9 @@ class WorkoutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_workout, container, false)
+        val v = inflater.inflate(R.layout.fragment_workout, container, false)
+        val recyclerView = v.findViewById<RecyclerView>(R.id.recyclerView)
+        return v
     }
 
     companion object {
@@ -55,10 +58,10 @@ class WorkoutFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        InitRecyclerView()
+        InitRecyclerView(view)
     }
-    private fun InitRecyclerView() {
-
+    private fun InitRecyclerView(v:View) {
+        val recyclerView = v.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = WorkoutAdapter(WorkoutProvider.WorkoutList)
     }

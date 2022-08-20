@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fitapp.R
@@ -17,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_login.*
+
 
 
 class MainActivity : AppCompatActivity(), MainView {
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity(), MainView {
                 .requestEmail()
                 .build()
         val googleSignInClient = GoogleSignIn.getClient(this, gso)
+        val login_btn = findViewById<ImageButton>(R.id.login_btn)
         login_btn.setOnClickListener {
             val signInIntent = googleSignInClient.signInIntent
             startActivityForResult(signInIntent, RC_GOOGLE_SIGN_IN)

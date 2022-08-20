@@ -9,7 +9,7 @@ import com.example.fitapp.fragments.AccountFragment
 import com.example.fitapp.fragments.CalendarFragment
 import com.example.fitapp.fragments.WorkoutFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_home.*
+
 
 
 class HomeActivity : AppCompatActivity(), HomeView {
@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity(), HomeView {
 
         presenter = HomePresenter(this)
         replace_fragment(WorkoutFragment)
-
+        val bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottom_navigation.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.Workout -> replace_fragment(WorkoutFragment)
