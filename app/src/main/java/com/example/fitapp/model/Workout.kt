@@ -4,6 +4,6 @@ data class Workout(
     val name: String,
     val level: String,
     val description: String,
-    val img: String,
+    val img: Int,
     val card: String
 )

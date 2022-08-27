@@ -1,36 +1,50 @@
 package com.example.fitapp.adapter
 
-import android.graphics.drawable.Drawable
+import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.res.ResourcesCompat
-
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.fitapp.R
-import com.example.fitapp.model.Workout
-import com.google.android.filament.View
-import android.content.Context as Context1
-import android.content.Context as context
 
-class WorkoutAdapter(private val WorkoutList:List<Workout>) : RecyclerView.Adapter<WorkoutViewHolder>(){
+import com.example.fitapp.model.Workout
+
+
+class WorkoutAdapter(private val WorkoutList:List<Workout>) : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>(){
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): WorkoutViewHolder {
-        val layoutInflater = LayoutInflater.from(parent.context)
-        return WorkoutViewHolder(layoutInflater.inflate(R.layout.workout_item, parent, false))
+        val itemView = LayoutInflater.from(parent.context).inflate(com.example.fitapp.R.layout.workout_item, parent, false)
+        return WorkoutViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
-        val item = WorkoutList[position]
-        holder.render(item)
-        //holder.Context.setImageDrawable(holder.Workoutimgcard.getDrawable(item.card))
-
-
+        val currentItem = WorkoutList[position]
+        holder.card.setCardBackgroundColor(Color.parseColor(currentItem.card))
+        holder.image.setImageResource(currentItem.img)
+        holder.Workoutname.text = currentItem.name
+        holder.Workoutlevel.text = currentItem.level
+        holder.Workoutdescription.text = currentItem.description
 
     }
 
-    override fun getItemCount(): Int =  WorkoutList.size
+    override fun getItemCount() =  WorkoutList.size
 
+    class WorkoutViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+
+        val card: CardView = itemView.findViewById(com.example.fitapp.R.id.card)
+        val image: ImageView = itemView.findViewById(com.example.fitapp.R.id.imageView)
+        val Workoutname: TextView = itemView.findViewById(com.example.fitapp.R.id.coursename)
+        val Workoutlevel: TextView = itemView.findViewById(com.example.fitapp.R.id.courselevel)
+        val Workoutdescription: TextView = itemView.findViewById(com.example.fitapp.R.id.coursedescription)
+
+
+    }
 }
+
+
 
 
 

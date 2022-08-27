@@ -39,7 +39,6 @@ class WorkoutFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_workout, container, false)
-        val recyclerView = v.findViewById<RecyclerView>(R.id.recyclerView)
         return v
     }
 
