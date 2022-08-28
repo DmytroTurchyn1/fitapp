@@ -17,7 +17,7 @@ import com.example.fitapp.model.WorkoutProvider
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class WorkoutFragment : Fragment() {
+class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -62,7 +62,11 @@ class WorkoutFragment : Fragment() {
     private fun InitRecyclerView(v:View) {
         val recyclerView = v.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = WorkoutAdapter(WorkoutProvider.WorkoutList)
+        recyclerView.adapter = WorkoutAdapter(WorkoutProvider.WorkoutList, this)
+    }
+
+    override fun OnItemClick(position: Int) {
+        
     }
 
 

@@ -12,8 +12,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
 
-class HomeActivity : AppCompatActivity(), HomeView {
-    private lateinit var presenter: HomePresenter
+class HomeActivity : AppCompatActivity(){
+
     private var WorkoutFragment = WorkoutFragment()
     private var CalendarFragment = CalendarFragment()
     private var AccountFragment = AccountFragment()
@@ -22,7 +22,7 @@ class HomeActivity : AppCompatActivity(), HomeView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        presenter = HomePresenter(this)
+
         replace_fragment(WorkoutFragment)
         val bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottom_navigation.setOnNavigationItemSelectedListener {

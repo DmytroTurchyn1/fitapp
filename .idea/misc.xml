@@ -10,6 +10,7 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.3265625" />
+        <entry key="app/src/main/res/layout/activity_start_workout.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/fragment_workout.xml" value="0.3591485507246377" />
         <entry key="app/src/main/res/layout/workout_item.xml" value="0.4036458333333333" />
