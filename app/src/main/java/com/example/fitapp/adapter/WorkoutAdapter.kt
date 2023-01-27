@@ -48,8 +48,10 @@ class WorkoutAdapter(private val WorkoutList:List<Workout>, private val listener
 
         }
     }
+
     interface OnItemClickListener{
         fun OnItemClick(position: Int)
+
     }
 }
 

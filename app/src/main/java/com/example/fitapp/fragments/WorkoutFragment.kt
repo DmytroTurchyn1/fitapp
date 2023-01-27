@@ -1,15 +1,29 @@
 package com.example.fitapp.fragments
 
+import android.annotation.SuppressLint
+import android.app.Dialog
+import android.content.Context
+import android.content.Intent
+import android.graphics.drawable.ColorDrawable
+
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.PopupWindow
+import android.widget.TextView
+
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitapp.R
 import com.example.fitapp.adapter.WorkoutAdapter
+import com.example.fitapp.feature.home.HomeActivity
+import com.example.fitapp.feature.login.MainView
 import com.example.fitapp.model.WorkoutProvider
 
 
@@ -17,7 +31,7 @@ import com.example.fitapp.model.WorkoutProvider
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener {
+class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener, WorkoutFragmentView {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -66,8 +80,26 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener {
     }
 
     override fun OnItemClick(position: Int) {
-        
+        if (position==0){
+            ShowPopup()
+        }else if (position==1){
+            Toast.makeText(context, position.toString(), Toast.LENGTH_LONG).show()
+        }else if (position==2){
+            Toast.makeText(context, position.toString(), Toast.LENGTH_LONG).show()
+        }
+
+
     }
+
+    fun ShowPopup(){
+        val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val popupView = inflater.inflate(R.layout.training1popup, null)
+        val focusable = true
+        val popupWindow = PopupWindow(popupView, 1100, 2100, focusable)
+        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
+        popupWindow.setBackgroundDrawable(ColorDrawable())
+    }
+
 
 
 }
