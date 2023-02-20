@@ -13,6 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
@@ -45,15 +46,15 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener, WorkoutFr
     }
 
 
-
+    private lateinit var popupWindow: PopupWindow
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val v = inflater.inflate(R.layout.fragment_workout, container, false)
-        return v
+        val view = inflater.inflate(R.layout.fragment_workout, container, false)
+        return view
     }
 
     companion object {
@@ -90,16 +91,25 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener, WorkoutFr
 
 
     }
+    private fun ShowPopup() {
+        val popupView = layoutInflater.inflate(R.layout.training1popup, null)
+        val closeButton = popupView.findViewById<ImageButton>(R.id.backbutton)
+        closeButton.setOnClickListener {
+            closePopup()
+        }
+        popupWindow = PopupWindow(
+            popupView,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
 
-    fun ShowPopup(){
-        val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val popupView = inflater.inflate(R.layout.training1popup, null)
-        val focusable = true
-        val popupWindow = PopupWindow(popupView, 1100, 2100, focusable)
+            true
+        )
+        popupWindow.width = 1100
+        popupWindow.height = 2100
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
-        popupWindow.setBackgroundDrawable(ColorDrawable())
     }
-
-
+    private fun closePopup() {
+        popupWindow.dismiss()
+    }
 
 }
