@@ -9,4 +9,6 @@
     <string name="beginner_level">principiante</string>
     <string name="medium_level">medio</string>
     <string name="advanced_level">avanzado</string>
+    <string name="seconds">s</string>
+    <string name="next">Próximo</string>
 </resources>

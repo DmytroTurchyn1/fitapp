@@ -14,9 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitapp"
         tools:targetApi="31">
-        <activity
-            android:name=".StartWorkout"
-            android:exported="false" />
+        <activity android:name=".feature.workouts.workoutbeg.WorkoutBeg"/>
+
         <activity
             android:name=".feature.home.HomeActivity"
             android:exported="false" />

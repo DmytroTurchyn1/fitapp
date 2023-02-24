@@ -35,7 +35,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/backbutton"
+                    android:id="@+id/btnBack"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="5dp"
@@ -44,12 +44,13 @@
                     app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
 
                 <TextView
-                    android:id="@+id/cardname"
+                    android:id="@+id/tvCardName"
                     android:layout_width="318dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
 
                     android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/kanit"
                     android:text="TextView"
                     android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +58,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/cardimage"
+                android:id="@+id/imgCardImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
@@ -85,14 +86,14 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
-                    android:id="@+id/star"
+                    android:id="@+id/imgStar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_baseline_star_24" />
 
                 <TextView
-                    android:id="@+id/rate"
+                    android:id="@+id/tvRate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -112,14 +113,14 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
-                    android:id="@+id/fire"
+                    android:id="@+id/imgFire"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_baseline_local_fire_department_24" />
 
                 <TextView
-                    android:id="@+id/calories"
+                    android:id="@+id/tvCaloriesBurned"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -139,14 +140,14 @@
                 app:layout_constraintStart_toStartOf="parent">
 
                 <ImageView
-                    android:id="@+id/clock"
+                    android:id="@+id/imgClock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_baseline_access_time_24" />
 
                 <TextView
-                    android:id="@+id/time"
+                    android:id="@+id/tvTimeNeeded"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -167,26 +168,28 @@
                 android:progressTint="#FFFFFF" />
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/tvTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/kanit"
                 android:text="TextView"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/tvDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="2dp"
+                android:fontFamily="@font/kanit"
                 android:text="TextView"
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/start"
+                android:id="@+id/btnStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"

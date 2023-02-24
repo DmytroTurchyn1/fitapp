@@ -11,4 +11,6 @@
     <string name="beginner_level">beginner</string>
     <string name="medium_level">medium</string>
     <string name="advanced_level">advanced</string>
+    <string name="seconds">s</string>
+    <string name="next">Next</string>
 </resources>

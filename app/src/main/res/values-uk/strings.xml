@@ -9,4 +9,6 @@
     <string name="beginner_level">новачок</string>
     <string name="medium_level">середній</string>
     <string name="advanced_level">просунутий</string>
+    <string name="seconds">с</string>
+    <string name="next">Наступне</string>
 </resources>

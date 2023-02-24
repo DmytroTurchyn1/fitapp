@@ -1,10 +1,8 @@
 package com.example.fitapp.feature.login
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -99,7 +97,7 @@ class MainActivity : AppCompatActivity(), MainView {
         }
         startActivity(Intent(this, HomeActivity::class.java))
         finish()
-        // Navigate to MainActivity
+
     }
     override fun navigateTologin(){
 

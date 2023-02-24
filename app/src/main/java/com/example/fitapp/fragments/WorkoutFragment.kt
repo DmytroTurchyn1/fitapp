@@ -1,38 +1,25 @@
 package com.example.fitapp.fragments
 
-import android.annotation.SuppressLint
-import android.app.Dialog
-import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
-
 import android.os.Bundle
 import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.LinearLayout
-import android.widget.PopupWindow
-import android.widget.TextView
-
-import android.widget.Toast
+import android.widget.*
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitapp.R
 import com.example.fitapp.adapter.WorkoutAdapter
-import com.example.fitapp.feature.home.HomeActivity
-import com.example.fitapp.feature.login.MainView
+import com.example.fitapp.feature.workouts.workoutbeg.WorkoutBeg
 import com.example.fitapp.model.WorkoutProvider
-
 
 
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener, WorkoutFragmentView {
+class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener {
 
     private var param1: String? = null
     private var param2: String? = null
@@ -91,12 +78,19 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener, WorkoutFr
 
 
     }
+
     private fun ShowPopup() {
         val popupView = layoutInflater.inflate(R.layout.training1popup, null)
-        val closeButton = popupView.findViewById<ImageButton>(R.id.backbutton)
+        val closeButton = popupView.findViewById<ImageButton>(R.id.btnBack)
+        val startworlot = popupView.findViewById<Button>(R.id.btnStart)
+        val tvCardName = popupView.findViewById<TextView>(R.id.tvCardName)
         closeButton.setOnClickListener {
             closePopup()
         }
+        startworlot.setOnClickListener {
+            startWork(tvCardName)
+        }
+        tvCardName.text ="training 1"
         popupWindow = PopupWindow(
             popupView,
             LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -109,6 +103,15 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener, WorkoutFr
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
     }
     private fun closePopup() {
+        popupWindow.dismiss()
+    }
+    private fun startWork(tvCardName: TextView) {
+        val intent = Intent(activity, WorkoutBeg::class.java)
+
+        intent.putExtra("Workoutname", tvCardName.text.toString());
+        startActivity(intent)
+
+
         popupWindow.dismiss()
     }
 
