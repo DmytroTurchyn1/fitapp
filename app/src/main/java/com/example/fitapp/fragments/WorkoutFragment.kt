@@ -99,7 +99,7 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener {
             true
         )
         popupWindow.width = 1100
-        popupWindow.height = 2100
+        popupWindow.height = 1850
         popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0)
     }
     private fun closePopup() {
@@ -108,7 +108,7 @@ class WorkoutFragment : Fragment(),WorkoutAdapter.OnItemClickListener {
     private fun startWork(tvCardName: TextView) {
         val intent = Intent(activity, WorkoutBeg::class.java)
 
-        intent.putExtra("Workoutname", tvCardName.text.toString());
+        intent.putExtra("Workoutname", tvCardName.text.toString())
         startActivity(intent)
 
 

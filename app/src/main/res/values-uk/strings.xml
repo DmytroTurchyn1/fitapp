@@ -11,4 +11,7 @@
     <string name="advanced_level">просунутий</string>
     <string name="seconds">с</string>
     <string name="next">Наступне</string>
+    <string name="skip">Пропустити</string>
+    <string name="rate_your_workout">Оцініть своє тренування</string>
+    <string name="finish">Закінчити</string>
 </resources>

@@ -13,4 +13,7 @@
     <string name="advanced_level">advanced</string>
     <string name="seconds">s</string>
     <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="rate_your_workout">Rate your workout</string>
+    <string name="finish">Finish</string>
 </resources>

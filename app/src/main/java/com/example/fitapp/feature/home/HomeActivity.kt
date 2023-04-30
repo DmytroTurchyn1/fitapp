@@ -1,8 +1,12 @@
 package com.example.fitapp.feature.home
 
+import android.content.ContentValues
+import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.PopupWindow
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.fitapp.R
 import com.example.fitapp.feature.login.MainPresenter
@@ -10,7 +14,9 @@ import com.example.fitapp.fragments.AccountFragment
 import com.example.fitapp.fragments.CalendarFragment
 import com.example.fitapp.fragments.WorkoutFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import org.w3c.dom.Text
 
 
 class HomeActivity : AppCompatActivity(){
@@ -23,7 +29,6 @@ class HomeActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-
         replace_fragment(WorkoutFragment)
         val bottom_navigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottom_navigation.setOnNavigationItemSelectedListener {
@@ -34,6 +39,7 @@ class HomeActivity : AppCompatActivity(){
             }
             true
         }
+
     }
 
     private fun replace_fragment(fragment: Fragment){
